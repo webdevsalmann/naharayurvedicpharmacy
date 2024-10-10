@@ -20,7 +20,7 @@ export default function SearchInput({ className }) {
     useEffect(() => {
         const params = new URLSearchParams(searchParams);
         if (params.has("search")) {
-            return
+            return setSearchTerm(params.get("search"))
         } else {
             setSearchTerm("")
         }
@@ -99,10 +99,10 @@ export default function SearchInput({ className }) {
             {/* Suggestion Lists */}
             {isFocused && suggestions.length > 0 && (
                 <ul className="absolute left-0 right-0 top-[110%] bg-background z-[9999] rounded-md border">
-                    {suggestions.map((item, index) => (
+                    {suggestions.slice(0,10).map((item, index) => (
                         <li key={item.label + "Search"}>
                             <button
-                                onClick={() => navigateToSearch(item.value)} // Handle button click
+                                onClick={() => {navigateToSearch(item.value);setSearchTerm(item.value)}} // Handle button click
                                 className={cn(
                                     "block w-full text-left px-base py-xs cursor-pointer",
                                     highlightedIndex === index ? "bg-secondary" : "hover:bg-secondary"

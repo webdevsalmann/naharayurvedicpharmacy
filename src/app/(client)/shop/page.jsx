@@ -4,13 +4,6 @@ import Sidebar from "@/components/layouts/shop/sidebar";
 import { products } from "@/lib/data/database";
 import { Suspense } from "react";
 
-// Generate static parameters if you have dynamic routes (e.g., sub-pages or filtering)
-export async function generateStaticParams() {
-    // If your shop page needs to generate based on categories or specific filters
-    // return categories.map((category) => ({ category })); // Example for categories
-    return []; // Return an empty array if no params needed for this page
-}
-
 // The page component
 export default function ShopPage({ searchParams }) {
     // Get search parameters

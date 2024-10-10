@@ -27,7 +27,7 @@ export default function Display({ filteredData }) {
       </div>
 
       <div className="mt-base grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-base">
-        {filteredData.map(item => (
+        {filteredData.slice(0,12).map(item => (
           <ProductCard data={item} key={item.id} />
         ))}
       </div>
