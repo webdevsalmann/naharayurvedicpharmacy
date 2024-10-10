@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Inter, Lexend, STIX_Two_Text } from "next/font/google";
+import { Lexend, STIX_Two_Text } from "next/font/google";
 import { siteMd } from "@/lib/data/metadatas";
 import Navbar from "@/components/layouts/navbar/navbar";
 import Footer from "@/components/layouts/footer/footer";

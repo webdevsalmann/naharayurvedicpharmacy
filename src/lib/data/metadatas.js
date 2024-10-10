@@ -1,16 +1,16 @@
 
 export const siteConfig = {
-    name: "Site Name",
-    title: "Site Title",
-    description: "Site Description",
+    name: "Nahar Ayurvedic Pharmacy",
+    title: "Ayurvedic solution",
+    description: "One stop for ayurvedic solution",
     url: "https://google.com",
     baseUrl: "https://google.com",
-    ogImage: "https://site/og.jpg",
+    ogImage: "https://naharayurvedicpharmacy.vercel.app/og.png",
     links: {
         twitter: "https://twitter.com/username",
         instagram: "https://instagram.com/username",
     },
-    owner: "Site Owner"
+    owner: "Nahar Ayurvedic Pharmacy"
 }
 
 // ===================================================
