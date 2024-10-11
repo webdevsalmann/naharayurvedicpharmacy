@@ -14,7 +14,7 @@ export default function ProductCarousalSection({
         {p && <p>{p}</p>}
       </SectionHeading>
 
-      <SectionBody>
+      <SectionBody >
         <ProductCarousal data={data} />
       </SectionBody>
     </Section>

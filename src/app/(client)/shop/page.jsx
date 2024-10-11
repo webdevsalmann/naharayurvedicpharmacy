@@ -1,10 +1,9 @@
-// src/app/(client)/shop/page.jsx
 import Display from "@/components/layouts/shop/display";
 import Sidebar from "@/components/layouts/shop/sidebar";
+import { ShopProvider } from "@/components/providers/shop-provider";
 import { products } from "@/lib/data/database";
 import { Suspense } from "react";
 
-// The page component
 export default function ShopPage({ searchParams }) {
     // Get search parameters
     const categories = Array.isArray(searchParams.category) ? searchParams.category : searchParams.category ? [searchParams.category] : [];
@@ -38,13 +37,15 @@ export default function ShopPage({ searchParams }) {
     });
 
     return (
-        <main className="size-full">
-            <div className='relative p-base container size-full min-h-40 flex gap-base'>
-                <Suspense fallback={<div>Loading sidebar...</div>}>
-                    <Sidebar />
-                </Suspense>
-                <Display filteredData={filteredData} />
-            </div>
-        </main>
+        <ShopProvider>
+            <main className="size-full">
+                <div className='relative p-base container size-full min-h-40 flex gap-base'>
+                    <Suspense fallback={<div>Loading sidebar...</div>}>
+                        <Sidebar />
+                    </Suspense>
+                    <Display filteredData={filteredData} />
+                </div>
+            </main>
+        </ShopProvider>
     );
 }

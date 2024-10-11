@@ -9,7 +9,7 @@ import { Suspense } from 'react';
 export default function Navbar() {
   return (
     <>
-      <div className={cn("p-base md:px-block container w-full bg-background md:border-0")}>
+      <div className={cn("p-base md:px-block container w-full bg-background shadow-md md:border-0")}>
         <nav className="w-full flex gap-base items-center justify-between">
 
           <Link className="w-fit flex-center" href="/">

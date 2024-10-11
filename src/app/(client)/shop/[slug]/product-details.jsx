@@ -63,7 +63,7 @@ export default function ProductDetails({
                         </div>
 
                         {/* {Pricing} */}
-                        <div className="py-base border-t">
+                        <div className="py-base px-px border-t">
                             <div className="flex items-center gap-2 text-muted-foreground text-sm">
                                 <Hash className="inline size-4 shrink-0" />
                                 <span>Pricing</span>
@@ -85,18 +85,7 @@ export default function ProductDetails({
                                 </TableBody>
                             </Table>
                         </div>
-
-                        {/* SKU */}
-                        {/* <div className="py-xs border-y">
-                    <div className="flex items-center gap-2 text-muted-foreground">
-                        <Hash className="inline size-4 shrink-0" />
-                        <span>SKU</span>
-                        <span className="text-sm text-foreground">{SKU}</span>
                     </div>
-                </div> */}
-                    </div>
-
-                    {/* <div className="mt-base font-semibold text-primary text-lg">{price}</div> */}
 
                     {/* Buttons */}
                     <div className="mt-base flex gap-4">

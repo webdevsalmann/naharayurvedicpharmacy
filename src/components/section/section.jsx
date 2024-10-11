@@ -27,7 +27,7 @@ export function SectionHeading({ children, className, ...props }) {
 export function SectionBody({ children, className, ...props }) {
     return (
         <div className={cn(
-            "mt-block w-full",
+            "mt-xl w-full",
             className,
         )} {...props}>
             {children}
@@ -38,7 +38,7 @@ export function SectionBody({ children, className, ...props }) {
 export function SectionProductGrid({ children, className, ...props }) {
     return (
         <div className={cn(
-            "mt-block grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-base", className
+            "mt-xl grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-base", className
         )} {...props}>
             {children}
         </div>

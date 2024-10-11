@@ -71,20 +71,25 @@
 }
 
 @layer components {
-  h1,.h1 {
-    @apply scroll-m-20 text-[2.5rem] leading-[3rem] md:text-5xl font-extrabold tracking-tight;
+
+  h1,
+  .h1 {
+    @apply scroll-m-20 text-[2.5rem] leading-[3rem] md:text-5xl font-extrabold tracking-tight font-stix;
   }
 
-  h2,.h2 {
-    @apply scroll-m-20 mt-16 mb-6 text-4xl font-semibold tracking-tight first:mt-0;
+  h2,
+  .h2 {
+    @apply scroll-m-20 mt-16 mb-xs text-4xl font-semibold tracking-tight first:mt-0 font-stix;
   }
 
-  h3,.h3 {
-    @apply scroll-m-20 text-2xl font-semibold tracking-tight;
+  h3,
+  .h3 {
+    @apply scroll-m-20 text-2xl font-semibold tracking-tight font-stix;
   }
 
-  h4,.h4 {
-    @apply scroll-m-20 text-xl font-semibold tracking-tight;
+  h4,
+  .h4 {
+    @apply scroll-m-20 text-xl font-semibold tracking-tight font-stix;
   }
 
   /* p {

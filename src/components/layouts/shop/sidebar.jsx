@@ -5,12 +5,13 @@ import { shopFilters } from "@/lib/data/data";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { cn } from "@/lib/utils";
-import { useSiteState } from "@/components/providers/site-state-provider";
 import SidebarToggleButton from "./sidebar-toggle-button";
+import useShop from "@/components/providers/shop-provider";
 
 export default function Sidebar() {
-  const { sidebarOpen, setSidebarOpen } = useSiteState();
+  const { sidebarOpen, setSidebarOpen } = useShop();
   const searchParams = useSearchParams();
+  
   const router = useRouter();
   const searchValues = Array.from(searchParams.entries());
 
@@ -38,7 +39,7 @@ export default function Sidebar() {
           {/* Filter */}
           {shopFilters.map((section) => (
             <Accordion key={section.id + "FilterSection"} type="single" collapsible>
-              <AccordionItem className="-mb-xs" value={section.id + "FilterSection"}>
+              <AccordionItem className="-mb-xs border-none" value={section.id + "FilterSection"}>
                 <AccordionTrigger className="text-lg py-sm">
                   {section.name}
                 </AccordionTrigger>

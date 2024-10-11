@@ -1,10 +1,10 @@
 "use client"
-import { useSiteState } from '@/components/providers/site-state-provider';
+import useShop from '@/components/providers/shop-provider';
 import { Button } from '@/components/ui/button'
 import { Filter } from 'lucide-react'
 
 export default function SidebarToggleButton() {
-    const { sidebarOpen, setSidebarOpen } = useSiteState();
+    const { sidebarOpen, setSidebarOpen } = useShop();
 
     return (
         <Button className="w-fit flex items-center text-xs hover:border-black" size="sm" variant="outline" onClick={() => setSidebarOpen(!sidebarOpen)}>

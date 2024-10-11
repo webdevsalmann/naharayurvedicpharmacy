@@ -98,7 +98,7 @@ export default function SearchInput({ className }) {
 
             {/* Suggestion Lists */}
             {isFocused && suggestions.length > 0 && (
-                <ul className="absolute left-0 right-0 top-[110%] bg-background z-[9999] rounded-md border">
+                <ul className="absolute left-0 right-0 top-[115%] bg-background z-[9999] rounded-md border shadow-md border-primary">
                     {suggestions.slice(0,10).map((item, index) => (
                         <li key={item.label + "Search"}>
                             <button

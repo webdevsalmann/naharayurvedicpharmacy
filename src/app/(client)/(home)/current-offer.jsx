@@ -1,12 +1,17 @@
 import Section from '@/components/section/section'
+import Image from 'next/image'
 import React from 'react'
 
 export default function CurrentOffer() {
   return (
-    <Section className="bg-yellow-200 text-primary">
-      <div className="w-full sm:w-1/2 text-3xl font-bold font-stix">
-        Flat &quot;30% OFF&quot; on purchase of 10+ of any product
-      </div>
-    </Section>
+    <div className="w-full">
+      <Image
+        className='w-full'
+        src="/images/offer/1.png"
+        width={1000}
+        height={450}
+        alt='Nahar ayurvedic pharmacy offer'
+      />
+    </div>
   )
 }

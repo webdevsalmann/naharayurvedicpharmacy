@@ -21,7 +21,7 @@ export default function NavigationLinks() {
                 href={item.href}
             >
                 {item.lists && savedProductsIds.length > 0 && (
-                    <div className="absolute top-0 right-0 p-1 size-lg bg-primary text-primary-foreground rounded-full flex-center text-xs">{savedProductsIds.length}</div>
+                    <div className="absolute top-1 right-1 p-px size-[18px] bg-primary text-primary-foreground rounded-full flex-center text-xs">{savedProductsIds.length}</div>
                 )}
 
                 {item.title}
