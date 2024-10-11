@@ -12,30 +12,34 @@ const quickLinks = [
   },
   {
     label: "About",
-    href: "/"
+    href: "/about"
   },
   {
     label: "Shop",
-    href: "/"
+    href: "/shop"
   },
   {
     label: "Contact",
-    href: "/"
+    href: "/contact"
   },
 ]
 
 const productsLinks = [
   {
     label: "Pills",
-    href: "/"
+    href: "/shop?category=pill"
   },
   {
     label: "Oils",
-    href: "/"
+    href: "/shop?category=oil"
   },
   {
     label: "Powders",
-    href: "/"
+    href: "/shop?category=powder"
+  },
+  {
+    label: "Tablets",
+    href: "/shop?category=tablet"
   },
 ]
 
@@ -86,7 +90,7 @@ export default function Footer() {
               <ul className="mt-2">
                 {quickLinks.map((item, i) => (
                   <li key={item.label + "Footer"}>
-                    <Link className="capitalize text-link" href="/">
+                    <Link className="capitalize text-link" href={item.href}>
                       {item.label}
                     </Link>
                   </li>
@@ -100,7 +104,7 @@ export default function Footer() {
               <ul className="mt-2">
                 {productsLinks.map((item, i) => (
                   <li key={item.label + "Footer"}>
-                    <Link className="capitalize text-link" href="/">
+                    <Link className="capitalize text-link" href={item.href}>
                       {item.label}
                     </Link>
                   </li>

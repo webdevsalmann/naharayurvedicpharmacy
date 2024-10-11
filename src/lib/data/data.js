@@ -140,25 +140,25 @@ export const navigationLinks = [
         title: "Home",
         href: "/",
         varient: "ghost",
-        icon: <Home className="size-xl shrink-0" />
+        icon: <Home className="size-full shrink-0" />
     },
     {
         title: "Shop",
         href: "/shop",
         varient: "ghost",
-        icon: <Store className="size-xl shrink-0" />
+        icon: <Store className="size-full shrink-0" />
     },
     {
         title: "Saved",
         href: "/saved",
         varient: "ghost",
-        icon: <Heart className="size-xl shrink-0" />,
+        icon: <Heart className="size-full shrink-0" />,
         lists: true,
     },
     {
         title: "Contact",
         href: "/contact",
         varient: "",
-        icon: <Phone className="size-xl shrink-0" />
+        icon: <Phone className="size-full shrink-0" />
     },
 ]

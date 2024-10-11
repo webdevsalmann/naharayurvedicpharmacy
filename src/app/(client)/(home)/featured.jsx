@@ -12,7 +12,7 @@ export default function Featured() {
                 </SectionHeading>
 
                 <SectionBody>
-                    <div className="grid gap-base grid-cols-2">
+                    <div className="grid gap-xs sm:gap-base grid-cols-2">
                         {products.slice(0, 4).map(item => (
                             <FeatureCard data={item} key={item.id + "HomeFeatureCard"} />
                         ))}

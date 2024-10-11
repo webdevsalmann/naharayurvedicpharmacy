@@ -21,6 +21,11 @@ module.exports = {
         lexend: ['var(--lexend)'],
         stix: ['var(--stix)'],
       },
+      fontSize: {
+        '2xs': ['10px', {
+          lineHeight: '12px',
+        }],
+      },
       spacing: {
         'xs': '0.5rem'/* 8px */,
         'sm': '0.75rem'/* 12px */,
