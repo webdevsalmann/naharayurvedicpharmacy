@@ -70,26 +70,35 @@
   }
 }
 
+
 @layer components {
+  .hd {
+    @apply absolute before:block before:absolute before:-top-4 before:-left-4 md:before:-top-8 md:before:-left-8 before:size-8 md:before:size-12 before:bg-[url('/decoration.svg')] before:bg-center before:bg-no-repeat before:bg-cover;
+  }
+
+  .hd.no-hd,
+  .no-hd {
+    @apply  before:hidden;
+  }
 
   h1,
   .h1 {
-    @apply scroll-m-20 text-[2.5rem] leading-[3rem] md:text-5xl font-extrabold tracking-tight font-stix;
+    @apply relative scroll-m-20 text-[2.5rem] leading-[3rem] md:text-5xl font-extrabold tracking-tight font-stix hd;
   }
 
   h2,
   .h2 {
-    @apply scroll-m-20 mt-16 mb-xs text-3xl md:text-4xl font-semibold tracking-tight first:mt-0 font-stix;
+    @apply relative scroll-m-20 mt-16 mb-xs text-3xl md:text-4xl font-semibold tracking-tight first:mt-0 font-stix hd;
   }
 
   h3,
   .h3 {
-    @apply scroll-m-20 text-2xl font-semibold tracking-tight font-stix;
+    @apply relative scroll-m-20 text-2xl font-semibold tracking-tight font-stix hd;
   }
 
   h4,
   .h4 {
-    @apply scroll-m-20 text-xl font-semibold tracking-tight font-stix;
+    @apply relative scroll-m-20 text-xl font-semibold tracking-tight font-stix hd;
   }
 
   /* p {
@@ -123,4 +132,5 @@
   .flex-between {
     @apply flex justify-between items-center;
   }
+
 }

@@ -19,6 +19,10 @@ const quickLinks = [
     href: "/shop"
   },
   {
+    label: "Saved",
+    href: "/saved"
+  },
+  {
     label: "Contact",
     href: "/contact"
   },

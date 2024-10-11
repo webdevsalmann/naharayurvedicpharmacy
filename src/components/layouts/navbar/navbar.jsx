@@ -13,7 +13,7 @@ export default function Navbar() {
         <nav className="w-full flex gap-base items-center justify-between">
 
           <Link className="w-fit flex-center" href="/">
-            <LogoHorizontal className="block h-8 w-fit text-primary" />
+            <LogoHorizontal className="block h-6 md:h-10 w-fit text-primary" />
             {/* <LogoSquare className="block sm:hidden h-10 w-fit text-primary" /> */}
             <span className='sr-only'>webdevsalmann</span>
           </Link>

@@ -14,6 +14,12 @@ export default function ProductDetails({
     return (
         <Section className="">
             <div className="relative grid gap-base md:gap-block md:grid-cols-5">
+                <div className="block md:hidden">
+                    <h1 className="mt-base h2 mb-0 font-bold font-stix">{name}</h1>
+                    <p className="mt-xs h3 font-bold font-stix no-hd">{hindiName}</p>
+                    <Badge className="uppercase text-sm" variant="secondary">{category}</Badge>
+                </div>
+
                 {/* Image */}
                 <div className="md:sticky top-base h-fit md:col-span-2">
                     <Image
@@ -27,9 +33,11 @@ export default function ProductDetails({
 
                 {/* Details */}
                 <div className="md:col-span-3">
-                    <Badge className="uppercase text-sm" variant="secondary">{category}</Badge>
-                    <h1 className="mt-base h2 mb-0 font-bold font-stix">{name}</h1>
-                    <p className="mt-xs h3 font-bold font-stix">{hindiName}</p>
+                    <div className="hidden md:block">
+                        <h1 className="mt-base h2 mb-0 font-bold font-stix">{name}</h1>
+                        <p className="mt-xs h3 font-bold font-stix no-hd">{hindiName}</p>
+                        <Badge className="uppercase text-sm" variant="secondary">{category}</Badge>
+                    </div>
                     <p className="mt-2 text-foreground">{benefits}</p>
                     <p className="mt-base text-sm">{description}</p>
 
@@ -68,22 +76,24 @@ export default function ProductDetails({
                                 <Hash className="inline size-4 shrink-0" />
                                 <span>Pricing</span>
                             </div>
-                            <Table className="mt-2 border rounded-md overflow-hidden">
-                                <TableHeader>
-                                    <TableRow>
-                                        <TableHead>Quantity</TableHead>
-                                        <TableHead className="text-right">Price (INR-₹)</TableHead>
-                                    </TableRow>
-                                </TableHeader>
-                                <TableBody>
-                                    {pricing.map((item) => (
-                                        <TableRow key={name + item.price + "ProductDetail"}>
-                                            <TableCell>{item.quantity}</TableCell>
-                                            <TableCell className="text-right">₹{item.price}</TableCell>
+                            <div className="mt-2 border rounded-md overflow-hidden">
+                                <Table className="">
+                                    <TableHeader>
+                                        <TableRow>
+                                            <TableHead>Quantity</TableHead>
+                                            <TableHead className="text-right">Price (INR-₹)</TableHead>
                                         </TableRow>
-                                    ))}
-                                </TableBody>
-                            </Table>
+                                    </TableHeader>
+                                    <TableBody>
+                                        {pricing.map((item) => (
+                                            <TableRow key={name + item.price + "ProductDetail"}>
+                                                <TableCell>{item.quantity}</TableCell>
+                                                <TableCell className="text-right">₹{item.price}</TableCell>
+                                            </TableRow>
+                                        ))}
+                                    </TableBody>
+                                </Table>
+                            </div>
                         </div>
                     </div>
 

@@ -40,7 +40,7 @@ export default function Benefits() {
           <Accordion type="single" collapsible>
             {benefits.map(item => (
               <AccordionItem value={item.id} key={item.id + "BenefitAccordion"}>
-                <AccordionTrigger className="text-left">{item.title}</AccordionTrigger>
+                <AccordionTrigger className="text-left no-hd">{item.title}</AccordionTrigger>
                 <AccordionContent>{item.desctiption}</AccordionContent>
               </AccordionItem>
             ))}
