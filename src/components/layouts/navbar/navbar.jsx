@@ -12,7 +12,7 @@ export default function Navbar() {
       <div className={cn("p-base md:px-block container w-full bg-background shadow-md md:border-0")}>
         <nav className="w-full flex gap-base items-center justify-between">
 
-          <Link className="w-fit flex-center" href="/">
+          <Link className="w-fit block flex-center flex-grow-0" href="/">
             <LogoHorizontal className="block h-6 md:h-10 w-fit text-primary" />
             {/* <LogoSquare className="block sm:hidden h-10 w-fit text-primary" /> */}
             <span className='sr-only'>webdevsalmann</span>
