@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { LogoHorizontal, LogoSquare } from '@/components/ui/svgs';
+import { LogoHorizontal } from '@/components/ui/svgs';
 import NavigationLinks from './navigation-links';
 import MobileNavbar from './mobile-navbar';
 import { cn } from '@/lib/utils';
@@ -13,9 +13,8 @@ export default function Navbar() {
         <nav className="w-full flex gap-base items-center justify-between">
 
           <Link className="w-fit block flex-center flex-grow-0" href="/">
-            <LogoHorizontal className="block h-6 md:h-10 w-fit text-primary" />
-            {/* <LogoSquare className="block sm:hidden h-10 w-fit text-primary" /> */}
-            <span className='sr-only'>webdevsalmann</span>
+            <LogoHorizontal className="block h-6 md:h-10 w-28 md:w-40 text-primary" />
+            <span className='sr-only'>Nahar Ayurvedic Pharmacy</span>
           </Link>
 
           <div className="flex items-center gap-base flex-1 lg:flex-grow-0">

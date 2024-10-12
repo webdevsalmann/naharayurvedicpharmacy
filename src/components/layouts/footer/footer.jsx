@@ -68,13 +68,13 @@ export default function Footer() {
         <div className="grid gap-block md:grid-cols-2">
           <div className="">
             <Link className="block w-fit flex-center" href="/">
-              <LogoHorizontal className="h-10 w-fit text-primary" />
+              <LogoHorizontal className="h-10 w-40 text-primary" />
               <span className='sr-only'>webdevsalmann</span>
             </Link>
 
             <div className="my-base flex gap-base">
               {socialLinks.map(item => (
-                <Link className={cn(buttonVariants({ variant: "outline" }), "aspect-square p-2")} href={item.href} key={item.label + "FooterSocialLink"}>
+                <Link className={cn(buttonVariants({ variant: "outline" }), "block w-fit aspect-square p-2")} href={item.href} key={item.label + "FooterSocialLink"}>
                   {item.icon}
                   <span className="sr-only">Visit {item.label}</span>
                 </Link>
@@ -82,7 +82,7 @@ export default function Footer() {
             </div>
 
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum molestiae magni temporibus accusantium? Odio, quos aspernatur optio suscipit facilis quae expedita consequuntur exercitationem recusandae corporis eum voluptatem? Aspernatur, blanditiis necessitatibus!
+              Empowering your journey to wellness with authentic Ayurvedic solutions. Discover natural healing rooted in centuries of tradition.
             </p>
           </div>
 
