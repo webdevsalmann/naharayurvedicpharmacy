@@ -63,7 +63,7 @@ const socialLinks = [
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="border-t mb-20 md:mb-0">
+    <footer className="border-t mb-12 md:mb-0">
       <Section>
         <div className="grid gap-block md:grid-cols-2">
           <div className="">

@@ -16,14 +16,14 @@ export default function ProductDetails({
             <div className="relative grid gap-base md:gap-block md:grid-cols-5">
                 <div className="block md:hidden">
                     <h1 className="mt-base h2 mb-0 font-bold font-stix">{name}</h1>
-                    <p className="mt-xs h3 font-bold font-stix no-hd">{hindiName}</p>
+                    <p className="my-xs h3 font-bold font-stix no-hd">{hindiName}</p>
                     <Badge className="uppercase text-sm" variant="secondary">{category}</Badge>
                 </div>
 
                 {/* Image */}
-                <div className="md:sticky top-base h-fit md:col-span-2">
+                <div className="md:sticky top-base h-fit md:col-span-2 rounded-md overflow-hidden">
                     <Image
-                        className='w-full h-fit aspect-[4/4.5] object-cover border rounded'
+                        className='w-full h-fit aspect-[4/4.5] object-cover border'
                         src="/images/product/1.jpg"
                         width={300}
                         height={300}
@@ -71,7 +71,7 @@ export default function ProductDetails({
                         </div>
 
                         {/* {Pricing} */}
-                        <div className="py-base px-px border-t">
+                        <div className="py-base border-t">
                             <div className="flex items-center gap-2 text-muted-foreground text-sm">
                                 <Hash className="inline size-4 shrink-0" />
                                 <span>Pricing</span>

@@ -87,7 +87,7 @@ export default function SearchInput({ className }) {
         <div className={cn("relative", className)} ref={suggestionsRef}>
             <Input
                 ref={inputRef}
-                className="hover:text-foreground"
+                className="min-w-20 hover:text-foreground"
                 placeholder="Search Here..."
                 type="search"
                 value={searchTerm}

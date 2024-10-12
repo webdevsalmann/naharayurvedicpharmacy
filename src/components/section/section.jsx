@@ -1,8 +1,9 @@
 import { cn } from "@/lib/utils";
 
-export default function Section({ children, wrapperClassName, className, ...props }) {
+export default function Section({ children, wrapperClassName, midChild, className, ...props }) {
     return (
         <section className={className}>
+            {midChild && midChild}
             <div className={cn(
                 "mx-auto container p-6 sm:py-12 md:p-16 lg:p-20 lg:py-16",
                 wrapperClassName,

@@ -3,8 +3,8 @@ export const siteConfig = {
     name: "Nahar Ayurvedic Pharmacy",
     title: "Ayurvedic solution",
     description: "One stop for ayurvedic solution",
-    url: "https://google.com",
-    baseUrl: "https://google.com",
+    url: "https://naharayurvedicpharmacy.vercel.app",
+    baseUrl: "https://naharayurvedicpharmacy.vercel.app",
     ogImage: "https://naharayurvedicpharmacy.vercel.app/og.png",
     links: {
         twitter: "https://twitter.com/username",
