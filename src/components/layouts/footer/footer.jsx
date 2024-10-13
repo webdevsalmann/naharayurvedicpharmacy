@@ -26,6 +26,10 @@ const quickLinks = [
     label: "Contact",
     href: "/contact"
   },
+  {
+    label: "Products Data",
+    href: "/products-data"
+  },
 ]
 
 const productsLinks = [
@@ -87,7 +91,7 @@ export default function Footer() {
           </div>
 
 
-          <div className="w-full grid gap-block sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <div className="w-full grid gap-block sm:grid-cols-2">
             {/* Quick Links */}
             <div className="md:justify-self-end">
               <div className="font-semibold">Quick Links</div>

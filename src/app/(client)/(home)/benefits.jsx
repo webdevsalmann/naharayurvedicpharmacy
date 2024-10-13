@@ -1,5 +1,14 @@
+"use client"
 import Section, { SectionHeading } from '@/components/section/section'
+import Autoplay from "embla-carousel-autoplay"
 import React from 'react'
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
 
 import {
   Accordion,
@@ -7,6 +16,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import Image from 'next/image'
 
 const benefits = [
   {
@@ -34,10 +44,45 @@ const benefits = [
 export default function Benefits() {
   return (
     <Section className="bg-primary text-secondary">
-      <div className="grid md:grid-cols-2">
-        <div className="">
-          <h2>Ayurveda Ideal Path to Health & Wealth</h2>
-          <Accordion type="single" collapsible>
+      <h2>Ayurveda Ideal Path to Health & Wealth</h2>
+      
+      <div className="mt-base grid md:grid-cols-2 gap-base md:gap-block">
+        <div className="rounded-md aspect-[4/3] border overflow-hidden md:order-2">
+          <Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 5000, })]}>
+            <CarouselContent>
+              <CarouselItem>
+                <Image
+                  className='w-full aspect-[4/3] object-cover object-center'
+                  src="/images/common/1.jpg"
+                  width={400}
+                  height={400}
+                  alt='Ayurveda'
+                />
+              </CarouselItem>
+              <CarouselItem>
+                <Image
+                  className='w-full aspect-[4/3] object-cover object-center'
+                  src="/images/common/2.jpg"
+                  width={400}
+                  height={400}
+                  alt='Ayurveda'
+                />
+              </CarouselItem>
+              <CarouselItem>
+                <Image
+                  className='w-full aspect-[4/3] object-cover object-center'
+                  src="/images/common/3.jpg"
+                  width={400}
+                  height={400}
+                  alt='Ayurveda'
+                />
+              </CarouselItem>
+            </CarouselContent>
+          </Carousel>
+        </div>
+
+        <div className="md:order-1">
+          <Accordion type="single" defaultValue='benefit1' collapsible>
             {benefits.map(item => (
               <AccordionItem value={item.id} key={item.id + "BenefitAccordion"}>
                 <AccordionTrigger className="text-left no-hd">{item.title}</AccordionTrigger>
@@ -47,7 +92,6 @@ export default function Benefits() {
           </Accordion>
         </div>
       </div>
-
     </Section>
   )
 }
