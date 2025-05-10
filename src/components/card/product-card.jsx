@@ -11,7 +11,7 @@ export default function ProductCard({ data: { id, name, slug, indication, catego
         <div className="aspect-[4/3] overflow-hidden">
           <Image
             className='size-full object-cover group-hover:scale-110 transition-all'
-            src="/images/product/1.jpg"
+            src={category === "pill" ? "/images/product/1.jpg" : category === "oil" ? "/images/product/2.jpg" : category === "tablet" ? "/images/product/1.jpg" :"/images/product/3.jpg"}
             width={300}
             height={300}
             alt='Product Image'
